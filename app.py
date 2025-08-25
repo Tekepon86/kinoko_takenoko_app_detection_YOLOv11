@@ -27,7 +27,7 @@ def prepare_image(img: Image.Image, max_w=1280):
         img = img.resize((max_w, h))
     return img
 
-def infer_and_draw(model: YOLO, img: Image.Image, conf=0.4):
+def infer_and_draw(model: YOLO, img: Image.Image, conf=0.5):
     res = model.predict(img, conf=conf, verbose=False)[0]
     names = model.names
     labels = [names[int(b.cls)] for b in res.boxes]
@@ -62,3 +62,4 @@ if uploaded_file:
         for k, v in Counter(labels).items():
             st.write(f"- {k}: {v}個")
         st.image(vis, caption="検出結果", use_container_width=True)
+
