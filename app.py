@@ -28,3 +28,4 @@ while True:
 # 🔷 終了処理
 cap.release()
 cv2.destroyAllWindows()
+
