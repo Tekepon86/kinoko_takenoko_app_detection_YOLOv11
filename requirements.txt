@@ -17,6 +17,7 @@ fsspec==2025.5.1
 gitdb==4.0.12
 GitPython==3.1.44
 h11==0.16.0
+huggingface_hub
 idna==3.10
 Jinja2==3.1.6
 joblib==1.5.1
@@ -74,6 +75,7 @@ ultralytics-thop==2.0.14
 urllib3==2.4.0
 uvicorn==0.35.0
 watchdog==6.0.0
+
 
 
 
