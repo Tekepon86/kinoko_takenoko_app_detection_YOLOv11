@@ -6,7 +6,7 @@ from pathlib import Path
 # 🔷 YOLO11モデル読み込み
 weights_path = Path("models/best.pt")
 if not weights_path.exists():
-    url = "hhttps://huggingface.co/Tetsushi86/kinoko-takenoko-v11/resolve/main/kinoko-takenoko-v11.pt"
+    url = "https://huggingface.co/Tetsushi86/kinoko-takenoko-v11/resolve/main/kinoko-takenoko-v11.pt"
     urllib.request.urlretrieve(url, weights_path)
     
 model = YOLO(str(weights_path))
@@ -35,6 +35,7 @@ while True:
 # 🔷 終了処理
 cap.release()
 cv2.destroyAllWindows()
+
 
 
 
