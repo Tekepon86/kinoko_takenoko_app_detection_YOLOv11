@@ -7,7 +7,7 @@
 ---
 
 ## 🚀 デモ
-- [Streamlit Cloud デモはこちら](https://your-app.streamlit.app)  
+- [Streamlit Cloud デモはこちら](https://kinokotakenokoappdetectionyolov11.streamlit.app/)  
   （スマートフォンからも利用可能）
 
 ---
