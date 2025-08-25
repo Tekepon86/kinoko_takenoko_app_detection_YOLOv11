@@ -1,8 +1,10 @@
 import cv2
 from ultralytics import YOLO
+from pathlib import Path
 
 # 🔷 YOLO11モデル読み込み
-model = model = YOLO('yolov5/runs/train/kinoko_takenoko_all_30_0609/weights/best_v11_250707_default.pt')  # 重みファイル名は自身のものに変更
+weights_path = Path(__file__).parent / "models" / "best.pt"
+model = YOLO(str(weights_path))
 
 # 🔷 Webカメラ起動
 cap = cv2.VideoCapture(1)
@@ -28,4 +30,5 @@ while True:
 # 🔷 終了処理
 cap.release()
 cv2.destroyAllWindows()
+
 
