@@ -1,3 +1,19 @@
+# YOLO training outputs
+runs/
+weights/
+*.onnx
+*.ckpt
+*.tflite
+
+# モデルファイル（原則無視、例外でbest.ptだけコミット）
+*.pt
+!models/best.pt
+
+# キャプチャやデモ動画など（任意でアップするもの以外）
+*.mp4
+*.avi
+*.mov
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
