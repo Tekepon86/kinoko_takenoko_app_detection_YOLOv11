@@ -7,7 +7,7 @@ weights/
 
 # モデルファイル（原則無視、例外でbest.ptだけコミット）
 *.pt
-!models/best.pt
+!models/YOLOv11.pt
 
 # キャプチャやデモ動画など（任意でアップするもの以外）
 *.mp4
