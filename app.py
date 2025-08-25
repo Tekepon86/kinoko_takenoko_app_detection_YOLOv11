@@ -1,15 +1,19 @@
 import cv2
-import urllib.request
+from huggingface_hub import hf_hub_download
 from ultralytics import YOLO
 from pathlib import Path
 
-# 🔷 YOLO11モデル読み込み
-weights_path = Path("models/best.pt")
-if not weights_path.exists():
-    url = "https://huggingface.co/Tetsushi86/kinoko-takenoko-v11/resolve/main/kinoko-takenoko-v11.pt"
-    urllib.request.urlretrieve(url, weights_path)
-    
-model = YOLO(str(weights_path))
+# Hugging Face Hub から best.pt をダウンロード（キャッシュされる）
+weights_path = hf_hub_download(
+    repo_id="Tetsushi86/kinoko-takenoko-v11",  # ここを自分のHFリポ名に
+    filename="kinoko-takenoko-v11.pt"
+)
+
+# 念のためサイズチェック（破損防止）
+assert Path(weights_path).exists() and Path(weights_path).stat().st_size > 1_000_000
+
+# YOLO モデル読み込み
+model = YOLO(weights_path)
 
 # 🔷 Webカメラ起動
 cap = cv2.VideoCapture(1)
@@ -35,6 +39,7 @@ while True:
 # 🔷 終了処理
 cap.release()
 cv2.destroyAllWindows()
+
 
 
 
