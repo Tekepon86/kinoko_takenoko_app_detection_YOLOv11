@@ -7,9 +7,9 @@
 ---
 
 ## 🚀 デモ
-- [Streamlit Cloud デモはこちら](https://kinokotakenokoappdetectionyolov11.streamlit.app/)  
+- [Streamlit Cloudはこちら](https://kinokotakenokoappdetectionyolov11.streamlit.app/)  
   （スマートフォンからも利用可能）
-
+- [リアルタイム検出（ローカル）デモはこちら](/demo/kinotake_realtime.gif)
 ---
 
 ## 📊 成果
