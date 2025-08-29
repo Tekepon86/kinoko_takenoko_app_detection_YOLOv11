@@ -32,7 +32,7 @@
   - 最新モデルで精度大幅向上（mAP0.95=0.946）  
   - 推論速度・汎化性能も改善
 
-👉 詳細は [スライド資料](./slides/kinoko-takenoko-process.pdf) をご覧ください
+👉 詳細は [スライド資料](docs/app_slide.pdf)
 
 ---
 
